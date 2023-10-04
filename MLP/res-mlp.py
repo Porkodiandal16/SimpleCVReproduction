@@ -11,6 +11,7 @@ class Affine(nn.Module):
     def forward(self, x):
         return x * self.g + self.b
 
+
 class PreAffinePostLayerScale(nn.Module): # https://arxiv.org/abs/2103.17239
     def __init__(self, dim, depth, fn):
         super().__init__()
